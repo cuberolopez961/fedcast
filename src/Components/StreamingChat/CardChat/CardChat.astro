@@ -1,0 +1,16 @@
+---
+ import { imageConfig } from "astro:assets"
+import imageResource from "../../../resources/avatar.jpg"
+---
+<section class="w-full flex flex-col gap-2 bg-zinc-800 p-3 rounded-md">
+    <header class="w-full flex flex-row gap-2 items-center">
+        <img class="w-[50px] h-[50px] rounded-full border-2 border-red-500" src={imageResource.src} alt="">
+        <h4 class="text-white font-semibold">Username</h4>
+        <div class="flex flex-1 justify-end">
+            <span class="text-white">menu</span> <!-- More options menu -->
+        </div>
+    </header>
+    <article class="w-full text-white p-2">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </article>
+</section>

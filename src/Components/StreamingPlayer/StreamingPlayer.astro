@@ -1,0 +1,14 @@
+---
+import "video.js/dist/video-js.css";
+const streamingURL = import.meta.env.HLS_STREAMING_URL;
+---
+
+<video id="live-player" class="video-js w-full h-auto aspect-video rounded-md" controls autoplay muted>
+  <source src={streamingURL} type="application/x-mpegURL" />
+</video>
+
+<script>
+  import videojs from "video.js";
+  const player = videojs("live-player", { liveui: true });
+  player.play();
+</script>
